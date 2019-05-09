@@ -25,9 +25,9 @@ $htmlUsername = $_POST['username'];
 $htmlPassword = $_POST['password']; 
 
 $servername = "cs-database.cs.loyola.edu";
-$username = "jbennett";
-$password = "1670682";
-$dbName = "jbennett";
+$username = "*****";
+$password = "*******";
+$dbName = "*******";
 $mysqli = new mysqli($servername, $username, $password, $dbName);
 
 #Connects 
