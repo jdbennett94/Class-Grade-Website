@@ -19,14 +19,93 @@
 
 
 <div class = "separator">
-<div id = jbutton1>A list of your classmates and their submitted emails<br />
-<br />
-Lastname: <br>Email: <br><br>Lastname: Egan<br>Email: blue@gmail.com<br><br>Lastname: f<br>Email: hjfranceschi@loyola.edu<br><br>Lastname: Bennett<br>Email: anvbennett@gmail.com<br><br>Lastname: Perrota<br>Email: tommybahama@gmail.com<br><br>Lastname: Parker<br>Email: kyle@gmail.com<br><br>Lastname: Manna<br>Email: jimmjims7@gmail.com<br><br>Lastname: Thomas<br>Email: test10@gmail.com<br><br>Lastname: t5<br>Email: t5@gmail.com<br><br>Lastname: Smith<br>Email: testemail.com<br><br>Lastname: Johnson<br>Email: test7@gmail.com<br><br>Lastname: Korver<br>Email: test8@gmail.com<br><br>Lastname: Howard<br>Email: test9@gmail.com<br><br></div><br />
-These are your grades, so far: <br />
-<div style = 'font-family: Courier New'>Assignment1 1: |  |<br>Assignment1 2: |  |<br>Assignment1 3: |  |<br>Assignment1 4: |  |<br>Assignment1 5: |  |<br></div><br>
+<?php
+
+$htmlUsername = $_POST['username'];
+$htmlPassword = $_POST['password']; 
+
+$servername = "cs-database.cs.loyola.edu";
+$username = "jbennett";
+$password = "1670682";
+$dbName = "jbennett";
+$mysqli = new mysqli($servername, $username, $password, $dbName);
+
+#Connects 
+if($mysqli->connect_error) {
+        die("Database connection failed: " . $mysqli->connect_error);
+}
+
+
+#Verify user
+#Verifies user data
+$queryU = "Select * from CS456Roster WHERE username='$htmlUsername' Limit 1";
+$resultU = $mysqli->query($queryU);
+if(!$resultU) die($mysqli->error);
+$rowU = $resultU->fetch_assoc();
+if ($resultU->num_rows === 0) {
+        echo "Your account has not been registered for this class";
+        goto a;
+}
+
+if (!password_verify("$htmlPassword", $rowU['password'])){
+	echo "Your username and password do not match"; 
+	echo nl2br ("\n");
+	echo nl2br ("\n");
+	echo "Click <a href = 'home.html'>here</a> to submit the correct info";
+	goto a; 
+} 
+
+
+#Classmates query Statement
+$sql1 = "select * from CS456Roster";
+$result1 = $mysqli->query($sql1);
+
+
+##### JQuery Button for class list ####
+echo ("<div id = jbutton1>"); 
+#Iterates through selection of classmates
+echo ("A list of your classmates and their submitted emails");
+echo nl2br ("\n");
+echo nl2br ("\n"); 
+while ($row = $result1->fetch_assoc()){
+	echo  "Lastname: ", $row['lastname'], "<br>", "Email: ", $row['email'], "<br><br>"; 
+}
+echo ("</div>"); 
+
+
+#### JQuery Button for grades ####
+echo nl2br ("\n");
+echo ("These are your grades, so far: ");
+echo nl2br ("\n");
+
+#Outputs 
+$queryGrades = "Select lastname,a1,a2,a3,a4,a5 from CS456Grades WHERE username='$htmlUsername' Limit 1";
+$resultG = $mysqli->query($queryGrades);
+if(!$resultG) die($mysqli->error);
+
+$rowG = $resultG->fetch_assoc();
+
+#Output to user 
+echo "<div style = 'font-family: Courier New'>";
+echo "Assignment1 1: | ", $rowG['a1'], " |", "<br>"; 
+echo "Assignment1 2: | ", $rowG['a2'], " |", "<br>";
+echo "Assignment1 3: | ", $rowG['a3'], " |", "<br>";
+echo "Assignment1 4: | ", $rowG['a4'], " |", "<br>";
+echo "Assignment1 5: | ", $rowG['a5'], " |", "<br>";
+echo "</div>";
+
+#echo nl2br ("\n");
+
+
+
+
+a:
+$mysqli->close();
+
+?>
+<br>
 <div style = "position: relative"><p>
-	<div style = "position:absolute;bottom:0;right:0;font-size:10pt;">Site Visitors: <!-- This is the php script to keep track of user # -->
-3800</p></div></div>  
+	<div style = "position:absolute;bottom:0;right:0;font-size:10pt;">Site Visitors: <?php include "userCounter.php";?></p></div></div>  
 </div>
 
 
@@ -49,4 +128,3 @@ Columbia, MD 21045<br>
 </div>
 
 </body></html>
-
