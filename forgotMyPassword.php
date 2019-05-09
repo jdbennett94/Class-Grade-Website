@@ -29,7 +29,7 @@ $htmlNewPassword = $_POST['password'];
 
 #Creates mysql connection
 $servername = "cs-database.cs.loyola.edu";
-$username = "jbennett";
+$username = "*******";
 $password = "******";
 $dbName = "*****";
 $mysqli = new mysqli($servername, $username, $password, $dbName);
