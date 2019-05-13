@@ -1,0 +1,75 @@
+/* This is the user customizable  site layout */
+
+/* Header */
+.header {
+        text-align: center;
+        background: darkgreen;
+        padding: 20px;
+}
+.header h1 {
+        font-size: 46pt;
+}
+
+
+/* Footer */
+.footer {
+        margin-top: 20px;
+        padding: 5px;
+        background: darkgreen;
+        text-align: center;
+}
+
+
+/* Obs. Recommended Dropdown Style */
+.dropbtn {
+        background-color: rgb(76,175,80);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 16px;
+        font-size: 16px;
+}
+.dropdown {
+        position:absolute;
+        display: inline-block;
+        top:10px;
+        right:11px;
+}
+.dcon {
+        right:0;
+        display: none;
+        position: absolute;
+        background-color: rgb(249,249,249);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dcon a {
+        text-decoration: none;
+        padding: 12px 16px;
+        color: black;
+        display: block;
+}
+.dcon a:hover {
+        background-color: rgb(241,241,241);
+}
+.dropdown:hover .dcon {
+        display: block;
+}
+
+
+/* Separators */
+.separator {
+        background-color: #333333;
+        margin-top: 20px;
+        padding: 20px;
+}
+
+
+/* All other things */
+* {
+        font-family: Georgia, serif ;
+        box-sizing: border-box;
+	text-transform: uppercase;
+	color: rgb(241,241,241) 
+}
