@@ -20,7 +20,9 @@ Click Here: http://jbennett.cs.loyola.edu/projects/projectFinal/html/home.html
 
 # Sample Images
 
+Landing/login page:  
 ![alt text](https://github.com/jdbennett94/Class-Grade-Website/blob/master/Images_Subfolder/Screenshot_2021-02-09%20Loyola%20Grade%20Portal.png)
 
-![alt text](https://github.com/jdbennett94/Class-Grade-Website/blob/master/Images_Subfolder/Screenshot_2021-02-09%20Loyola%20Grade%20Portal.png)
+New student page:  
+![alt text](https://github.com/jdbennett94/Class-Grade-Website/blob/master/Images_Subfolder/Screenshot_2021-02-09%20Loyola%20Grade%20Portal(1).png)
 
