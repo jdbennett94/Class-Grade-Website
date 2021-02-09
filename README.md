@@ -6,11 +6,11 @@ Create new student accounts
 Teacher super account capable of changing grades
 Student ability to check personal grades
 
-#Dependencies 
+# Dependencies 
 MySQL database usage for data
 PHP/HTML/CSS/Javascript usage interwoven
 
-#To Implement
+# To Implement
 *Add Javascript files next login* 
 1) Dark Mode CSS script
 2) Element Display Toggle
