@@ -10,7 +10,7 @@ Click Here: http://jbennett.cs.loyola.edu/projects/projectFinal/html/home.html
 
 # Sample Images
 
-![alt text](https://github.com/jdbennett94/To-Do-Checklist/blob/master/Image%20Sub/Screenshot_2021-02-09%20To%20Do%20List.png)
+![alt text]()
 
-![alt text](https://github.com/jdbennett94/To-Do-Checklist/blob/master/Image%20Sub/Screenshot_2021-02-09%20To%20Do%20List.png)
+![alt text]()
 
