@@ -7,8 +7,8 @@ Functions:
 - Student ability to check personal grades  
 
 # Dependencies 
-MySQL database usage for data
-PHP/HTML/CSS/Javascript usage interwoven
+- MySQL database usage for data  
+- PHP/HTML/CSS/Javascript usage interwoven  
 
 # To Implement
 *Add Javascript files next login* 
