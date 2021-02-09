@@ -2,9 +2,9 @@
 Bloackboard grade portal clone  
 
 Functions:  
-Create new student accounts  
-Teacher super account capable of changing grades  
-Student ability to check personal grades  
+- Create new student accounts  
+- Teacher super account capable of changing grades  
+- Student ability to check personal grades  
 
 # Dependencies 
 MySQL database usage for data
